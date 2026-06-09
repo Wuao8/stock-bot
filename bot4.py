@@ -30,7 +30,7 @@ if __name__ == "__main__":
             price = float(m.get("lastTradePrice", 0))
             volume = float(m.get("volume", 0))
 
-           end_date = m.get("endDate") or m.get("end_date")
+            end_date = m.get("endDate") or m.get("end_date")
            if not end_date:
                continue
 
