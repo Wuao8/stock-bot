@@ -95,9 +95,7 @@ if __name__ == "__main__":
 
     scored = sorted(scored, key=lambda x: x["score"], reverse=True)
 
-    if not scored:
-        send_message("🔎 Nessun segnale valido (score >= 60)")
-    else:
+    if scored:
         msg = "🚨 POLYMARKET SIGNALS (conservative v1)\n\n"
 
         for s in scored[:3]:
@@ -107,6 +105,6 @@ if __name__ == "__main__":
                 f"price: {s['price']} | "
                 f"vol: {s['volume']} | "
                 f"d-left: {round(s['days_left'], 1)}\n\n"
-            )
+           )
 
-        send_message(msg)
+      send_message(msg)
